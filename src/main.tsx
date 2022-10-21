@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+import ProfileModal from "./modals/ProfileModal";
 
 import { QueryClient, QueryClientProvider, useQuery } from "react-query";
 
@@ -17,7 +18,8 @@ import { fetchData } from "./fetchData";
 const queryClient = new QueryClient();
 
 function App() {
-  const [profileSelected, setProfileSelected] = useState();
+  const [profileSelected, setProfileSelected] = useState({});
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const columns = React.useMemo(
     () => [
       {
@@ -44,8 +46,8 @@ function App() {
               <button
                 type="button"
                 onClick={() => {
-                  const profileSelected = data[info.row.id];
-                  console.log("PROFILE SELECTED", profileSelected);
+                  setProfileSelected(data[info.row.id]);
+                  setModalIsOpen(true);
                 }}
                 className="showMoreButton"
               >
@@ -127,12 +129,13 @@ function App() {
           ))}
         </thead>
         <tbody>
-          {table.getRowModel().rows.map((row) => {
+          {table.getRowModel().rows.map((row, index) => {
             return (
               <tr key={row.id}>
                 {row.getVisibleCells().map((cell) => {
                   return (
-                    <td key={cell.id}>
+                    <td className={index % 2 ? 'bg-gray-200' : 'bg-gray-100'} key={cell.id}>
+                      <ProfileModal modalIsOpen={modalIsOpen} profileData={profileSelected} setModalIsOpen={() => setModalIsOpen(false)} />
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext()
