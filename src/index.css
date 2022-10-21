@@ -6,7 +6,8 @@ html {
 table {
   border: 1px solid lightgray;
   width: 1200px;
-  margin-bottom: 200px;
+  margin-top: 200px;
+  margin-left: 200px;
 }
 
 tbody {
@@ -35,4 +36,8 @@ tfoot th {
   color: white;
   width: 100px;
   border-radius: 50px;
+}
+
+.paginator {
+  margin-left: 200px;
 }

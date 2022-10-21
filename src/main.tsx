@@ -146,7 +146,7 @@ function App() {
         </tbody>
       </table>
       <div className="h-2" />
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 paginator">
         <button
           className="border rounded p-1"
           onClick={() => table.setPageIndex(0)}
