@@ -5,6 +5,8 @@ html {
 
 table {
   border: 1px solid lightgray;
+  width: 1200px;
+  margin-bottom: 200px;
 }
 
 tbody {
@@ -17,6 +19,9 @@ th {
   padding: 2px 4px;
 }
 
+tr {
+  margin-bottom: 50px;
+}
 tfoot {
   color: gray;
 }
