@@ -9,6 +9,7 @@ import Recommendations from './sections/Recommendations';
 import Languages from './sections/Languages';
 import Awards from './sections/Awards';
 import Courses from './sections/Courses';
+import Volunteering from './sections/Volunteering';
 
 function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
     return(
@@ -49,8 +50,9 @@ function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
           <Languages profile={profileData} />
           <Awards profile={profileData} />
           <Courses profile={profileData} />
+          <Volunteering profile={profileData} />
         </div>
-        <button className='h-min' onClick={setModalIsOpen}>Cerrar
+        <button className='h-min my-5 bg-green rounded-lg p-2 text-white w-fit self-center text-xl' onClick={setModalIsOpen}>Cerrar
         </button>
       </Modal>
     )
