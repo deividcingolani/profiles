@@ -107,7 +107,7 @@ function App() {
   return (
     <div className="main flex flex-col w-screen h-screen">
       <div className="inset-0 m-auto">
-        <table className='rounded-lg bg-white text-xl'>
+        <table className='rounded-lg bg-white text-xl text-purpled'>
           <thead>
             {table.getHeaderGroups().map((headerGroup) => (
               <tr key={headerGroup.id}>
