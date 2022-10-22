@@ -10,7 +10,7 @@ export default function Skills({profile}){
             {
                 profile.skills.map(skill => {
                     return(
-                        <span className='text-white bg-green p-2 rounded-lg w-fit'>{skill}</span>
+                        <span className='shadow-md text-white bg-green p-2 rounded-lg w-fit'>{skill}</span>
                     )
                 })
             }

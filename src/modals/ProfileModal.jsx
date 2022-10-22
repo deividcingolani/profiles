@@ -6,6 +6,9 @@ import Education from './sections/Education';
 import Skills from './sections/Skills';
 import Certificates from './sections/Certificates';
 import Recommendations from './sections/Recommendations';
+import Languages from './sections/Languages';
+import Awards from './sections/Awards';
+import Courses from './sections/Courses';
 
 function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
     return(
@@ -25,11 +28,13 @@ function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
             right: 0,
             margin: 'auto',
             borderRadius: '20px',
+            fontFamily: 'Poppins'
           },
           overlay: {
             backgroundColor: 'transparent',
             width: '100vw',
-            height: '100vh'
+            height: '100vh',
+            fontFamily: 'Poppins'
           }
         }}
       >
@@ -41,7 +46,9 @@ function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
           <Skills profile={profileData} />
           <Certificates profile={profileData} />
           <Recommendations profile={profileData} />
-
+          <Languages profile={profileData} />
+          <Awards profile={profileData} />
+          <Courses profile={profileData} />
         </div>
         <button className='h-min' onClick={setModalIsOpen}>Cerrar
         </button>

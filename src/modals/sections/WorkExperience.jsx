@@ -16,7 +16,7 @@ export default function WorkExperience({profile}){
                         const opts = { year: 'numeric', month: 'short' };
 
                         return(
-                            <div className='text-green bg-white w-full rounded-lg mb-5 p-2'>
+                            <div className='shadow-md text-green bg-white w-full rounded-lg mb-5 p-2'>
                                 <h1 className='text-xl'>{position.title} en</h1>
                                 <h1 className='text-md text-purpled mb-4'>{position.company}</h1>
                                 <p className='text-md text-purpled'>{position.description}</p>

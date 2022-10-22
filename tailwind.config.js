@@ -9,9 +9,14 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       'purpled': '#687b97',
-      'green': '#37d19a'
+      'green': '#37d19a',
+      'green2': 'linear-gradient(78deg, rgba(2,0,36,1) 0%, rgba(55,209,154,1) 0%, rgba(0,212,255,1) 100%)'
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        'sans': ['Poppins']
+      }
+    },
   },
   plugins: [],
 }

@@ -14,7 +14,7 @@ export default function Education({profile}){
                         const opts = { year: 'numeric', month: 'short' };
 
                         return(
-                            <div className='text-green bg-white w-full rounded-lg mb-5 p-2 flex flex-cols justify-between'>
+                            <div className='shadow-md text-green bg-white w-full rounded-lg mb-5 p-2 flex flex-cols justify-between'>
                                 <div>
                                     <h1 className='text-xl'>{education.field_of_study}</h1>
                                     <h1 className='text-xl'>{education.degree_name}</h1>

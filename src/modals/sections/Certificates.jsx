@@ -15,7 +15,7 @@ export default function Certificates({profile}){
                         const opts = { year: 'numeric', month: 'short' };
 
                         return(
-                            <div className='text-green bg-white w-full rounded-lg mb-5 p-2 flex flex-cols justify-between'>
+                            <div className='shadow-md text-green bg-white w-full rounded-lg mb-5 p-2 flex flex-cols justify-between'>
                                 <div>
                                     <h1 className='text-xl'>{certification.name}</h1>
                                     <h1 className='text-md text-purpled'>{certification.authority}</h1>
