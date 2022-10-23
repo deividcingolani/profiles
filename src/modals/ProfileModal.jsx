@@ -45,7 +45,7 @@ function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
       >
         <div className='flex flex-cols justify-between'>
           <h1 className='text-purpled2 text-xs mb-5 w-max'>profiles > {profileData.profile_id}</h1>
-          <button onClick={setModalIsOpen} className='text-green h-min text-right self-right p-0 lg:text-3xl'>x</button>
+          <button onClick={setModalIsOpen} className=' h-min text-right self-right p-0 lg:text-xl'>x</button>
         </div>
        
         <div className='grid grid-cols-1 w-full gap-y-5'>

@@ -15,6 +15,7 @@ const data = [
     firstName: "Jorge",
     lastName: "Inda",
   },
+  
 ];
 
 export async function fetchData(options) {

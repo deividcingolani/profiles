@@ -4,7 +4,7 @@ export default function Projects({profile}){
      }
      return(
           <>
-               <span className='text-green text-base lg:text-3xl flex flex-cols mb-5'>
+               <span className=' text-base lg:text-xl flex flex-cols mb-5'>
                     <iconify-icon style={{fontSize: '2rem'}} icon="carbon:tool-box"/>
                     <h1 className='self-end text-purpled ml-3'>Proyectos</h1>
                </span>
@@ -20,9 +20,9 @@ export default function Projects({profile}){
 
                               return(
                                    <div key={index} className='bg-white rounded-lg w-full lg:w-1/5 shadow-md p-2 lg:h-fit'>
-                                        <h1 key={index + project.title} className='text-green font-bold text-center mb-3'>{project.title}</h1>
+                                        <h1 key={index + project.title} className=' font-bold text-center mb-3'>{project.title}</h1>
                                         <h1 key={index + project.description} className='text-purpled text-xs lg:text-base font-bold text-center mb-4'>{project.description}</h1>
-                                        <h1 key={project.title} className='text-xs lg:text-base text-right text-green mt-8 capitalize'>{startDate.toLocaleString('es-ES', opts)} - {endDate.toLocaleString('es-ES', opts)}</h1>
+                                        <h1 key={project.title} className='text-xs lg:text-base text-right  mt-8 capitalize'>{startDate.toLocaleString('es-ES', opts)} - {endDate.toLocaleString('es-ES', opts)}</h1>
                                    </div>
                               );
                          })

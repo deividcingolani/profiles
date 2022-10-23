@@ -2,7 +2,7 @@ export default function Skills({profile}){
 
     return(
         <div>
-             <span className='text-green text-base lg:text-3xl flex flex-cols mb-5'>
+             <span className=' text-base lg:text-xl flex flex-cols mb-5'>
                     <iconify-icon style={{fontSize: '2rem'}} icon="eos-icons:rotating-gear"/>
                     <h1 className='self-end text-purpled ml-3'>Habilidades</h1>
             </span>

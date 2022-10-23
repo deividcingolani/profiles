@@ -107,7 +107,7 @@ function App() {
   return (
     <div className="main flex flex-col w-screen h-screen justify-center">
       <div className="self-center w-full h-fit">
-        <table className='inset-x-0 m-auto rounded-lg bg-white text-sm lg:text-3xl text-purpled w-8/12'>
+        <table className='inset-x-0 m-auto rounded-lg bg-white text-sm lg:text-xl text-purpled w-8/12'>
           <thead>
             {table.getHeaderGroups().map((headerGroup, index) => (
               <tr key={index + headerGroup.id}>
@@ -134,7 +134,7 @@ function App() {
                 <tr key={index + row.id}>
                   {row.getVisibleCells().map((cell) => {
                     return (
-                      <td className="px-3 py-10 text-center" key={cell.id}>
+                      <td className="px-3 py-2 text-center border-2" key={cell.id}>
                         <ProfileModal modalIsOpen={modalIsOpen} profileData={profileSelected} setModalIsOpen={() => setModalIsOpen(false)} />
                         {flexRender(
                           cell.column.columnDef.cell,
