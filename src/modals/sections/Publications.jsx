@@ -1,5 +1,5 @@
 export default function Publications({profile}){
-     if(!profile.publications || !profile.publications){
+     if(!profile.publications || !profile.publications.length){
           return;
      }
      return(
