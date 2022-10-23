@@ -4,8 +4,8 @@ export default function Volunteering({profile}){
     }
     return(
         <div>
-            <span className='text-green text-3xl flex flex-cols mb-5'>
-                <iconify-icon style={{fontSize: '3rem'}} icon="ic:outline-volunteer-activism"/>
+            <span className='text-green text-md lg:text-3xl flex flex-cols mb-5'>
+                <iconify-icon style={{fontSize: '2rem'}} icon="ic:outline-volunteer-activism"/>
                 <h1 className='self-end text-purpled ml-3'>Voluntariado</h1>
             </span>
             <div className='flex flex-cols flex-wrap gap-3 mx-5    '>
@@ -19,7 +19,7 @@ export default function Volunteering({profile}){
                               const opts = { year: 'numeric', month: 'long' };
 
                               return(
-                                   <div className='bg-white rounded-lg w-1/5 shadow-md p-2'>
+                                   <div className='bg-white rounded-lg w-full lg:w-1/5 shadow-md p-2'>
                                         <h1 className='text-green font-bold text-center mb-3'>{experience.role}</h1>
                                         <h1 className='text-purpled text-xs font-bold text-center mb-4'>{experience.company.name}</h1>
                                         <h1 className='text-xs text-right text-green mt-8 capitalize'>{startDate.toLocaleString('es-ES', opts)} - {endDate.toLocaleString('es-ES', opts)}</h1>
