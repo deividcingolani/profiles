@@ -8,9 +8,9 @@ export default function Skills({profile}){
             </span>
             <div className='flex flex-cols flex-wrap gap-3 mx-5'>
             {
-                profile.skills.map(skill => {
+                profile.skills.map((skill, index) => {
                     return(
-                        <span className='text-sm lg:text-base shadow-md text-white bg-green p-2 rounded-lg w-fit'>{skill}</span>
+                        <span key={index} className='text-sm lg:text-base shadow-md text-white bg-green p-2 rounded-lg w-fit'>{skill}</span>
                     )
                 })
             }

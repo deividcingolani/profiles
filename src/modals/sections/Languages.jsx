@@ -17,16 +17,16 @@ export default function Languages({profile}){
                </span>
                <div className='flex flex-cols flex-wrap gap-3 mx-5'>
                     {
-                         profile.languages.profile_languages.map(language => {
+                         profile.languages.profile_languages.map((language, index) => {
                               return(
-                                   <div className='ml-5 bg-white shadow-md rounded-lg p-2 w-full lg:w-1/5 text-center text-purpled font-bold'>
-                                        <h1>{language.name}</h1>
-                                        <div className='text-green'>
+                                   <div key={index} className='ml-5 bg-white shadow-md rounded-lg p-2 w-full lg:w-1/5 text-center text-purpled font-bold'>
+                                        <h1 key={index + language.name}>{language.name}</h1>
+                                        <div key={language.name} className='text-green'>
                                              {
                                                   
                                                  [...Array(PROFICENCY_LEVELS[language.proficiency])].map((e, i) => {
                                                   return(
-                                                       <iconify-icon style={{fontSize: '1rem'}} key={i} icon="ant-design:star-filled"/>
+                                                       <iconify-icon key={index + i} style={{fontSize: '1rem'}} icon="ant-design:star-filled"/>
                                                   )
                                                  })
                                              }

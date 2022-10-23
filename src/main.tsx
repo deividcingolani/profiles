@@ -109,8 +109,8 @@ function App() {
       <div className="inset-0 m-auto">
         <table className='rounded-lg bg-white text-sm lg:text-xl text-purpled'>
           <thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
+            {table.getHeaderGroups().map((headerGroup, index) => (
+              <tr key={index + headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
                     <th key={header.id} colSpan={header.colSpan}>
@@ -131,7 +131,7 @@ function App() {
           <tbody>
             {table.getRowModel().rows.map((row, index) => {
               return (
-                <tr key={row.id}>
+                <tr key={index + row.id}>
                   {row.getVisibleCells().map((cell) => {
                     return (
                       <td className="px-3 py-1 text-center" key={cell.id}>

@@ -10,8 +10,8 @@ export default function({profile}){
                </span>
                <div className='flex flex-cols flex-wrap gap-3 mx-5'>
                     {
-                         profile.courses.map(course => 
-                              <h1 className='bg-white rounded-lg p-2 shadow-lg text-green font-bold text-sm lg:text-base'>{course.name}</h1>
+                         profile.courses.map((course, index) => 
+                              <h1 key={index} className='bg-white rounded-lg p-2 shadow-lg text-green font-bold text-sm lg:text-base'>{course.name}</h1>
                          )
                     }
                </div>

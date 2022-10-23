@@ -28,16 +28,16 @@ export default function Recommendations({profile}){
                         const opts = { year: 'numeric', month: 'long' };
                         
                         return(
-                            <div className='shadow-md bg-white rounded-lg p-2 w-full lg:w-1/4 text-center'>
-                                <h1 className='text-green font-bold'>{recommendation.first_name}</h1>
-                                <h2 className='text-purpled text-xs mb-5'>{recommendation.occupation}</h2>
-                                <p className={`text-sm lg:text-base text-purpled text-ellipsis overflow-hidden ${expanded[index] ? 'h-full' : 'h-20'}`}>
+                            <div key={index} className='shadow-md bg-white rounded-lg p-2 w-full lg:w-1/4 text-center'>
+                                <h1 key={index + recommendation.first_name} className='text-green font-bold'>{recommendation.first_name}</h1>
+                                <h2 key={index + recommendation.occupation} className='text-purpled text-xs mb-5'>{recommendation.occupation}</h2>
+                                <p key={index + recommendation.text} className={`text-sm lg:text-base text-purpled text-ellipsis overflow-hidden ${expanded[index] ? 'h-full' : 'h-20'}`}>
                                     {recommendation.text}
                                 </p>
-                                <button className={`transition duration-150 ease-out ${expanded[index] ? 'rotate-180' : ''}`} onClick={() => onChange(index)} >
+                                <button key={index * index} className={`transition duration-150 ease-out ${expanded[index] ? 'rotate-180' : ''}`} onClick={() => onChange(index)} >
                                     <iconify-icon style={{fontSize: '2rem'}} icon="flat-color-icons:expand"/>
                                 </button>
-                                <h2 className='mt-5 capitalize text-green text-xs text-right mb-5'>{createdAt.toLocaleString('es-ES', opts)}</h2>
+                                <h2 key={recommendation.first_name} className='mt-5 capitalize text-green text-xs text-right mb-5'>{createdAt.toLocaleString('es-ES', opts)}</h2>
                             </div>
                         )
                     })
