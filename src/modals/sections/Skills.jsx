@@ -2,7 +2,7 @@ export default function Skills({profile}){
 
     return(
         <div>
-             <span className='text-green text-md lg:text-3xl flex flex-cols mb-5'>
+             <span className='text-green text-base lg:text-3xl flex flex-cols mb-5'>
                     <iconify-icon style={{fontSize: '2rem'}} icon="eos-icons:rotating-gear"/>
                     <h1 className='self-end text-purpled ml-3'>Habilidades</h1>
             </span>
@@ -10,7 +10,7 @@ export default function Skills({profile}){
             {
                 profile.skills.map(skill => {
                     return(
-                        <span className='text-sm lg:text-md shadow-md text-white bg-green p-2 rounded-lg w-fit'>{skill}</span>
+                        <span className='text-sm lg:text-base shadow-md text-white bg-green p-2 rounded-lg w-fit'>{skill}</span>
                     )
                 })
             }

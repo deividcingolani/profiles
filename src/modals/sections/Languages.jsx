@@ -11,7 +11,7 @@ export default function Languages({profile}){
      }
      return(
           <div>
-               <span className='text-green text-md lg:text-3xl flex flex-cols mb-5'>
+               <span className='text-green text-base lg:text-3xl flex flex-cols mb-5'>
                     <iconify-icon style={{fontSize: '2rem'}} icon="ps:world"/>
                     <h1 className='self-end text-purpled ml-3'>Lenguajes</h1>
                </span>

@@ -17,7 +17,7 @@ export default function Recommendations({profile}){
     profile.recommendations = profile.recommendations.sort((a,b) => b.text.length - a.text.length);
     return(
         <div>
-            <span className='text-green text-md lg:text-3xl flex flex-cols mb-5'>
+            <span className='text-green text-base lg:text-3xl flex flex-cols mb-5'>
                 <iconify-icon style={{fontSize: '3rem'}} icon="ant-design:star-filled"/>
                 <h1 className='self-end text-purpled ml-3'>Recomendaciones</h1>
             </span>
@@ -31,7 +31,7 @@ export default function Recommendations({profile}){
                             <div className='shadow-md bg-white rounded-lg p-2 w-full lg:w-1/4 text-center'>
                                 <h1 className='text-green font-bold'>{recommendation.first_name}</h1>
                                 <h2 className='text-purpled text-xs mb-5'>{recommendation.occupation}</h2>
-                                <p className={`text-sm lg:text-md text-purpled text-ellipsis overflow-hidden ${expanded[index] ? 'h-full' : 'h-20'}`}>
+                                <p className={`text-sm lg:text-base text-purpled text-ellipsis overflow-hidden ${expanded[index] ? 'h-full' : 'h-20'}`}>
                                     {recommendation.text}
                                 </p>
                                 <button className={`transition duration-150 ease-out ${expanded[index] ? 'rotate-180' : ''}`} onClick={() => onChange(index)} >

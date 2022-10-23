@@ -4,14 +4,14 @@ export default function({profile}){
      }
      return (
           <>
-               <span className='text-green text-md lg:text-3xl flex flex-cols mb-5'>
+               <span className='text-green text-base lg:text-3xl flex flex-cols mb-5'>
                          <iconify-icon style={{fontSize: '2rem'}} icon="carbon:course"/>
                          <h1 className='self-end text-purpled ml-3'>Cursos</h1>
                </span>
                <div className='flex flex-cols flex-wrap gap-3 mx-5'>
                     {
                          profile.courses.map(course => 
-                              <h1 className='bg-white rounded-lg p-2 shadow-lg text-green font-bold text-sm lg:text-md'>{course.name}</h1>
+                              <h1 className='bg-white rounded-lg p-2 shadow-lg text-green font-bold text-sm lg:text-base'>{course.name}</h1>
                          )
                     }
                </div>
