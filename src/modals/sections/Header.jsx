@@ -3,7 +3,7 @@ import 'iconify-icon';
 export default function Header({profile}){
      return(
         <div>
-            <h1 className='text-xl text-base lg:text-3xl text-green text-center '>{`${profile.first_name} ${profile.last_name}`}</h1>
+            <h1 className='text-2xl text-base lg:text-3xl text-green text-center '>{`${profile.first_name} ${profile.last_name}`}</h1>
             <h2 className='mt-2 text-xs lg:text-sm text-purpled flex justify-center w-full '>{
                 profile.contact_info.websites.map(web => {
                     if(!web.url){

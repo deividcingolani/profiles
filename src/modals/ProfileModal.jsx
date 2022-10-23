@@ -10,6 +10,10 @@ import Languages from './sections/Languages';
 import Awards from './sections/Awards';
 import Courses from './sections/Courses';
 import Volunteering from './sections/Volunteering';
+import Projects from './sections/Projects';
+import Publications from './sections/Publications';
+import Organizations from './sections/Organizations';
+import Patents from './sections/Patents';
 
 function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
     return(
@@ -39,6 +43,7 @@ function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
           }
         }}
       >
+        <h1 className='text-purpled2 text-xs mb-5'>Profiles > {profileData.profile_id}</h1>
         <div className='grid grid-cols-1 w-full gap-y-5'>
           <Header profile={profileData}/>
           <AboutMe profile={profileData}/>
@@ -51,8 +56,13 @@ function ProfileModal({modalIsOpen, setModalIsOpen, profileData}){
           <Awards profile={profileData} />
           <Courses profile={profileData} />
           <Volunteering profile={profileData} />
+          <Projects profile={profileData} />
+          <Publications profile={profileData} />
+          <Organizations profile={profileData} />
+          <Patents profile={profileData} />
+
         </div>
-        <button className='h-min my-5 bg-green rounded-lg p-2 text-white w-fit self-center text-xl' onClick={setModalIsOpen}>Cerrar
+        <button className='h-min my-5 bg-green rounded-lg p-2 text-white w-fit self-center text-base lg:text-xl' onClick={setModalIsOpen}>Cerrar
         </button>
       </Modal>
     )
