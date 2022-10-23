@@ -105,9 +105,9 @@ function App() {
   });
 
   return (
-    <div className="main flex flex-col w-screen h-screen">
-      <div className="inset-0 m-auto">
-        <table className='rounded-lg bg-white text-sm lg:text-xl text-purpled'>
+    <div className="main flex flex-col w-screen h-screen justify-center">
+      <div className="self-center w-full h-fit">
+        <table className='inset-x-0 m-auto rounded-lg bg-white text-sm lg:text-3xl text-purpled w-8/12'>
           <thead>
             {table.getHeaderGroups().map((headerGroup, index) => (
               <tr key={index + headerGroup.id}>
@@ -134,7 +134,7 @@ function App() {
                 <tr key={index + row.id}>
                   {row.getVisibleCells().map((cell) => {
                     return (
-                      <td className="px-3 py-1 text-center" key={cell.id}>
+                      <td className="px-3 py-10 text-center" key={cell.id}>
                         <ProfileModal modalIsOpen={modalIsOpen} profileData={profileSelected} setModalIsOpen={() => setModalIsOpen(false)} />
                         {flexRender(
                           cell.column.columnDef.cell,
@@ -149,44 +149,44 @@ function App() {
           </tbody>
         </table>
       </div>
-      <div className="inset-0 m-auto">
+      <div className="h-min self-center p-2 bg-white rounded-lg m-2 ">
         <div className="flex items-center gap-2 paginator">
           <button
-            className="border rounded p-1"
+            className="border rounded p-1 text-white bg-green text-xs lg:text-2xl"
             onClick={() => table.setPageIndex(0)}
             disabled={!table.getCanPreviousPage()}
           >
             {"<<"}
           </button>
           <button
-            className="border rounded p-1"
+            className="border rounded p-1 text-white bg-green text-xs lg:text-2xl"
             onClick={() => table.previousPage()}
             disabled={!table.getCanPreviousPage()}
           >
             {"<"}
           </button>
           <button
-            className="border rounded p-1"
+            className="border rounded p-1 text-white bg-green text-xs lg:text-2xl"
             onClick={() => table.nextPage()}
             disabled={!table.getCanNextPage()}
           >
             {">"}
           </button>
           <button
-            className="border rounded p-1"
+            className="border rounded p-1 text-white bg-green text-xs lg:text-2xl"
             onClick={() => table.setPageIndex(table.getPageCount() - 1)}
             disabled={!table.getCanNextPage()}
           >
             {">>"}
           </button>
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-1 text-xs lg:text-2xl">
             <div>Page</div>
             <strong>
               {table.getState().pagination.pageIndex + 1} of{" "}
               {table.getPageCount()}
             </strong>
           </span>
-          <span className="flex items-center gap-1">
+          <span className="flex items-center gap-1 text-xs lg:text-2xl">
             | Go to page:
             <input
               type="number"
@@ -195,7 +195,7 @@ function App() {
                 const page = e.target.value ? Number(e.target.value) - 1 : 0;
                 table.setPageIndex(page);
               }}
-              className="border p-1 rounded w-16"
+              className="border p-1 rounded w-8 lg:w-16 text-xs lg:text-2xl"
             />
           </span>
           <select
