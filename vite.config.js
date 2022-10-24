@@ -24,7 +24,7 @@ export default defineConfig({
     : {},
   build: {
     rollupOptions: {
-      external: [/^node:.*/, "src/index.css"],
+      external: ["src/index.css"],
     },
   },
 });
